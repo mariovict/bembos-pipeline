@@ -16,11 +16,10 @@ pipeline {
 
     environment {
         // Si defines PYTHON_EXE en Manage Jenkins > System > Global properties se usa esa ruta; si no, "python"
-        PY            = "${env.PYTHON_EXE ?: 'python'}"
-        PGHOST        = 'localhost'
-        PGPORT        = '5432'
-        PGDATABASE    = 'bembos_dataops'
-        CORREO_EQUIPO = 'tu_correo@gmail.com'
+        PY         = "${env.PYTHON_EXE ?: 'python'}"
+        PGHOST     = 'localhost'
+        PGPORT     = '5432'
+        PGDATABASE = 'bembos_dataops'
     }
 
     stages {
@@ -69,14 +68,10 @@ pipeline {
 
     post {
         success {
-            mail to: "${CORREO_EQUIPO}",
-                 subject: "[OK] ETL Bembos - Build #${env.BUILD_NUMBER}",
-                 body: "El pipeline termino correctamente.\nDetalle: ${env.BUILD_URL}"
+            echo "Pipeline terminado correctamente. Build #${env.BUILD_NUMBER}"
         }
         failure {
-            mail to: "${CORREO_EQUIPO}",
-                 subject: "[FALLO] ETL Bembos - Build #${env.BUILD_NUMBER}",
-                 body: "El pipeline fallo. Revisar la consola:\n${env.BUILD_URL}console"
+            echo "El pipeline fallo. Revisar la consola del build #${env.BUILD_NUMBER}"
         }
     }
 }
