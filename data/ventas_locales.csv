@@ -1,0 +1,27 @@
+id_venta,fecha,local,producto,cantidad,precio_unitario
+2001,2026-10-20,Miraflores,Hamburguesa doble,2,22.9
+2002,20/13/2026,Miraflores,Papas fritas,1,7.5
+2003,2026-10-20, miraflores ,Hamburguesa clásica,5,14.9
+2004,2026-10-20,Miraflores,Hamburguesa clásica,3,14.9
+2004,2026-10-20,Miraflores,Hamburguesa clásica,3,14.9
+2005,2026-10-20,San Miguel,Gaseosa 500 ml,1,5.0
+2006,2026-10-20,SAN MIGUEL,Gaseosa 500 ml,2,5.0
+2007,2026-10-20,San Miguel,Hamburguesa clásica,-2,14.9
+2008,2026-10-20,San Miguel,Papas fritas,4,7.5
+2009,2026-10-20,Surco,Hamburguesa clásica,2,0
+2010,2026-10-20,surco,Hamburguesa clásica,5,14.9
+2011,2026-10-20,Surco,Papas fritas,1,7.5
+2012,2026-10-20,Surco,,5,59.9
+2011,2026-10-20,Surco,Papas fritas,1,7.5
+2013,2026-10-21,Miraflores,Hamburguesa clásica,2,14.9
+2014,2026-10-21,Miraflores,Milkshake,5,11.9
+2015,2026-10-21,Miraflores,Hamburguesa clásica,5,14.9
+2016,2026-10-21,Miraflores,Gaseosa 500 ml,4,5.0
+2017,2026-10-21,San Miguel,Hamburguesa clásica,2,14.9
+2018,2026-10-21,San Miguel,Hamburguesa clásica,5,14.9
+2019,2026-10-21,San Miguel,Combo familiar,2,59.9
+2020,2026-10-21,San Miguel,Hamburguesa doble,4,22.9
+2021,2026-10-21,Surco,Hamburguesa con queso,5,16.9
+2022,2026-10-21,Surco,Hamburguesa clásica,5,14.9
+2023,2026-10-21,Surco,Hamburguesa doble,5,22.9
+2024,2026-10-21,Surco,Combo familiar,2,59.9
