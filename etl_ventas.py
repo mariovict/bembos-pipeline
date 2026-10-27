@@ -19,6 +19,7 @@ ENTRADA = Path("data/ventas_locales.csv")
 SALIDA = Path("output")
 COLUMNAS = ["id_venta", "fecha", "local", "producto", "cantidad", "precio_unitario"]
 MAX_RECHAZO = float(os.getenv("MAX_RECHAZO", "0.30"))  # control de calidad: maximo 30 % de filas rechazadas
+LOCALES_PERMITIDOS = {"Miraflores", "San Miguel", "Surco"}
 
 
 def crear_engine() -> Engine:
@@ -74,6 +75,7 @@ def transform(df: pd.DataFrame):
         & (df["producto"] != "")
         & (df["cantidad"] > 0)
         & (df["precio_unitario"] > 0)
+        & df["local"].isin(LOCALES_PERMITIDOS)
     )
     limpios = df[valido].copy()
     rechazados = df[~valido].copy()

@@ -51,3 +51,8 @@ def test_load_guarda_en_base_de_datos(tmp_path):
         assert con.execute(text("select count(*) from ventas_limpias")).scalar() == 2
         assert con.execute(text("select count(*) from resumen_local_dia")).scalar() == 2
         assert con.execute(text("select build from etl_auditoria")).scalar() == "7"
+def test_rechaza_local_no_permitido():
+    limpios, rechazados = transform(pd.DataFrame([_fila(local="Callao")]))
+    assert limpios.empty
+    assert len(rechazados) == 1
+
